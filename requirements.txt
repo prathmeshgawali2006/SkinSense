@@ -1,0 +1,15 @@
+numpy
+pandas
+matplotlib
+seaborn
+pillow
+opencv-python
+jupyter
+tensorflow
+scipy
+ scikit-learn
+ fastapi
+uvicorn
+python-multipart
+pytest
+httpx
