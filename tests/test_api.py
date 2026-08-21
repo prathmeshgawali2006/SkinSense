@@ -19,14 +19,10 @@ def test_predict_rejects_non_image():
     assert response.status_code == 400
 
 def test_predict_accepts_valid_image():
-    with open("data/resized/test/acne/" + get_sample_filename(), "rb") as f:
+    with open("tests/fixtures/sample_acne.jpg", "rb") as f:
         response = client.post("/predict", files={"file": ("test.jpg", f, "image/jpeg")})
     assert response.status_code == 200
     body = response.json()
     assert "predicted_class" in body
     assert "confidence" in body
     assert body["predicted_class"] in ["acne", "blackheades", "dark spots", "pores", "wrinkles"]
-
-def get_sample_filename():
-    import os
-    return os.listdir("data/resized/test/acne")[0]
