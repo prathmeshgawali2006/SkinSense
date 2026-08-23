@@ -5,7 +5,7 @@ seaborn
 pillow
 opencv-python
 jupyter
-tensorflow
+tensorflow-cpu
 scipy
  scikit-learn
  fastapi
